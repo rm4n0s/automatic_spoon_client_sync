@@ -16,11 +16,11 @@ class JobCaller:
         json_data = resp.json()
         return [JobSchema(**item) for item in json_data]
 
-    # def get_job(self, id: int) -> JobSchema:
-    #     resp = httpx.get(self._host + "/api/v1/jobs/" + str(id))
-    #     _ = resp.raise_for_status()
-    #     json_data = resp.json()
-    #     return JobSchema.model_validate(json_data)
+    def get_job(self, id: int) -> JobSchema:
+        resp = httpx.get(self._host + "/api/v1/jobs/" + str(id))
+        _ = resp.raise_for_status()
+        json_data = resp.json()
+        return JobSchema.model_validate(json_data)
 
     def delete_job(self, id: int):
         resp = httpx.delete(self._host + "/api/v1/jobs/" + str(id))
