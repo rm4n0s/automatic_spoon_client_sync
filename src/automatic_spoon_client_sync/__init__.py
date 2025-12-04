@@ -28,7 +28,7 @@ from .inputs import (
     GeneratorUserInput,
     ImageUserInput,
     JobUserInput,
-    LoraIDAndWeight,
+    LoraIDAndWeightInput,
 )
 from .job_caller import JobCaller
 from .schemas import (
@@ -71,7 +71,7 @@ __all__ = [
     "ImageUserInput",
     "JobUserInput",
     "GeneratorUserInput",
-    "LoraIDAndWeight",
+    "LoraIDAndWeightInput",
     "EngineUserInput",
     "AIModelUserInput",
     "JobSchema",
