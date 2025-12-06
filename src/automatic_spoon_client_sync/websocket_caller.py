@@ -12,7 +12,7 @@ class WebsocketCaller:
     def iterate_on_generator_events(
         self, receive_type="json", timeout=None
     ) -> Iterator[Any]:
-        with connect_ws(self._host + "/events/generators") as ws:
+        with connect_ws(self._host + "/api/v1/websockets/events/generators") as ws:
             try:
                 while True:
                     if receive_type == "json":
