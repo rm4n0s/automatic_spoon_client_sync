@@ -1,5 +1,3 @@
-from websocket_caller import WebsocketCaller
-
 from .aimodel_caller import AIModelCaller
 from .engine_caller import EngineCaller
 from .enums import (
@@ -44,6 +42,7 @@ from .schemas import (
     JobSchema,
     LoraAndWeight,
 )
+from .websocket_caller import WebsocketCaller
 
 __all__ = [
     "CreationError",
