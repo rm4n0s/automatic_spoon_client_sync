@@ -43,6 +43,7 @@ class ImageUserInput(BaseModel):
 class JobUserInput(BaseModel):
     generator_id: int
     images: list[ImageUserInput]
+    ip_adapter_config: dict[str, Any] | None = None
 
 
 class GeneratorUserInput(BaseModel):

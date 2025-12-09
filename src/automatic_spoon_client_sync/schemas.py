@@ -1,3 +1,5 @@
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 from .enums import (
@@ -110,3 +112,4 @@ class JobSchema(BaseModel):
     generator_id: int
     images: list[ImageSchema]
     status: JobStatus
+    ip_adapter_config: dict[str, Any] | None = None
